@@ -1,10 +1,10 @@
 import urllib.request
 import json
 
-file = open('/git/bitcoinrichlist/richlist.txt', 'w')
+file = open('D:/User/Git/bitcoinrichlist/richlist.txt', 'w')
 file.write("at_btc,sum_100,sum_500\n")
 
-for at_block in range(500,352700+1,500):
+for at_block in range(500,1000+1,500):
 
     req = urllib.request.urlopen('http://bitcoinrichlist.com/api/v1/top100?atblock=%d' %(at_block))
     charset = req.info().get_param('charset', 'utf8')
